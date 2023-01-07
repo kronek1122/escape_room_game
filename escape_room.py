@@ -15,6 +15,8 @@ def help():
     w - wyrzuć przedmiot
     o - opis pomieszczenia
     t - pozostały czas
+    m - podejdz w wybrane miejsce
+    e - zakończ grę (poddaj się)
     ''')
 
 def remaining_time():
@@ -52,7 +54,7 @@ class Room:
     def __str__(self) -> str:
         print(f'Znajdujesz się w {self.name}, lepiej szybko znajdz sposób wydostania się z tego miejsca')
 
-    def left_side():
+    def spot():
         pass
 
 
@@ -78,9 +80,16 @@ def action():
     elif choice == 't':
         print(f"Tik, tak, tik, tak zostało Ci... {remaining_time()}")
 
+    elif choice == 'm':
+        spot = input("Gdzie chcesz podejść: ")
+        return Room().spot(spot)
+
+    elif choice == 'e':
+        print("przegrałeś")
     else:
         print("Błędna akcja, spróbuj ponownie.")
-        return action()
+    
+    return action()
     
     
 action()
