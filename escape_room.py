@@ -1,9 +1,10 @@
 from datetime import datetime, timedelta
-
+from pathlib import Path
 
 start_time = datetime.now()
 time_for_escape = timedelta(seconds= 600)
-
+path = Path(__file__).absolute().parent
+filepath = path / 'room.txt'
 
 def help():
     print('''
@@ -13,7 +14,7 @@ def help():
     z - zabierz przedmiot
     u - użyj przedmiot
     w - wyrzuć przedmiot
-    o - opis pomieszczenia
+    o - rozejrzy się do okoła
     t - pozostały czas
     m - podejdz w wybrane miejsce
     e - zakończ grę (poddaj się)
@@ -52,7 +53,9 @@ class Room:
         self.name = name
 
     def __str__(self) -> str:
-        print(f'Znajdujesz się w {self.name}, lepiej szybko znajdz sposób wydostania się z tego miejsca')
+        with open(filepath, mode = 'r', encoding='utf-8') as file:
+            for line in file.readlines():
+                print(line, end='')
 
     def spot():
         pass
