@@ -1,6 +1,4 @@
 Ogromny obraz za szybą przedstawiający człowieka trzymającego w rękach pustą tablicę w stronę ludu. W tle widać błyskawice.
 
 
-Po oświetleniu obrazu latarką UV początkowo nic nie zauważasz. Dopiero po szczegółowym oświetleniu tablicy zauważasz cyfry: 1, 2, 9, 7.
-
-To chyba nic nie da...
+Początkowo nic nie zauważasz. Dopiero po szczegółowym oświetleniu tablicy dostrzegasz cyfry: 1, 2, 9, 7.
