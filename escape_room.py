@@ -110,10 +110,10 @@ def using_item(item):
     elif item == 'szkatułka' and item in items:
         code = input("podaj 4 cyfry kodu (pisane ciągiem)")
         if code == '2112':
-            print('otworzyłeś szkatułke w środku znajduję się klucz, wkładasz go do kieszeni')
+            print('Otworzyłeś szkatułke w środku znajduję się klucz, wkładasz go do kieszeni')
             items.append('klucz')
         else:
-            print('kłódka ani drgnie, kod mus być inny')
+            print('Kłódka ani drgnie, kod mus być inny')
     elif item == "klucz" and player_location == 'drzwi' and item in items:
         code = input('Klucz pasuje, teraz należy wpisać 4 cyfrowy kod: ')
         if code == '1297':
