@@ -5,7 +5,7 @@ import time
 import sys
 
 start_time = datetime.now()
-time_for_escape = timedelta(seconds= 600)
+time_for_escape = timedelta(seconds= 360)
 path = Path(__file__).absolute().parent
 filepath = path / 'room.txt'
 player_location = 'room'
