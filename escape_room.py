@@ -33,7 +33,7 @@ def remaining_time():
     return str(end_time -datetime.now())
 
 def end_of_time():
-    time.sleep(20)
+    time.sleep(360)
     print("Czas się skończył. Nie udało Ci się uciec. Spróbuj ponownie.")
     quit()
 
