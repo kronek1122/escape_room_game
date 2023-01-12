@@ -1,5 +1,7 @@
 from datetime import datetime, timedelta
 from pathlib import Path
+import threading
+import time
 
 start_time = datetime.now()
 time_for_escape = timedelta(seconds= 600)
@@ -28,6 +30,13 @@ def list_to_string(s):
 def remaining_time():
     end_time = start_time + time_for_escape
     return str(end_time -datetime.now())
+
+def end_of_time():
+    time.sleep(600)
+    print("Czas się skończył. Nie udało Ci się uciec. Spróbuj ponownie.")
+    quit()
+
+end = threading.Thread(target=end_of_time)
 
 class Inventory:
 
@@ -169,7 +178,9 @@ def action():
         print("Błędna akcja, spróbuj ponownie."), help(), action()
     
     
-    
+
 Room().__str__()
+end.start()
 help()
 action()
+     
